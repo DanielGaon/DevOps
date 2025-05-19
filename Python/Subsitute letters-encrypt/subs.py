@@ -33,14 +33,15 @@ def decrypt_text(encrypted_text,dec_key):
             clear_text+=char
     return clear_text
 
+if __name__ == '__main__':
 #Checks all the function
-#def full_enc_flow(text):
-    enc_key = make_enc_key()
-    print("encryption key:",enc_key )
-    dec_key = (compute_dec_key(enc_key ))
-    print("Decryption key:",dec_key)
-    enc_text=(encrypt_text(text,enc_key ))
-    print("Encrypted text:",enc_text)
-    print("Decrypted text:",decrypt_text(enc_text,dec_key))
-
-#full_enc_flow(input("Enter phrase to encrypt:"))
+    def full_enc_flow(text):
+        enc_key = make_enc_key()
+        print("encryption key:",enc_key )
+        dec_key = (compute_dec_key(enc_key ))
+        print("Decryption key:",dec_key)
+        enc_text=(encrypt_text(text,enc_key ))
+        print("Encrypted text:",enc_text)
+        print("Decrypted text:",decrypt_text(enc_text,dec_key))
+if __name__ == '__main__':
+    full_enc_flow(input("Enter phrase to encrypt:"))
