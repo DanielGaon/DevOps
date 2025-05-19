@@ -16,7 +16,7 @@ def D_cmd():
             decryption=subs.decrypt_text(input('Please enter text to decrypt:'),dec_key)
             print(decryption)
         if text=='exit':
-            print('See you again!')
+            print('See you next time!')
             break
         text=input('enc>')
 

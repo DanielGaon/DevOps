@@ -34,7 +34,7 @@ def decrypt_text(encrypted_text,dec_key):
     return clear_text
 
 #Checks all the function
-#def full_enc_flow(text):
+def full_enc_flow(text):
     enc_key = make_enc_key()
     print(enc_key )
     dec_key = (compute_dec_key(enc_key ))
