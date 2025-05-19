@@ -1,6 +1,6 @@
 import subs
 
-def D_cmd():
+def D_cli():
     text=''
     while True:
         if text=='make key':
@@ -20,4 +20,4 @@ def D_cmd():
             break
         text=input('enc>')
 
-D_cmd()
+D_cli()

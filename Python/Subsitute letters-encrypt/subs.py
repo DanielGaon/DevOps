@@ -1,9 +1,9 @@
 import random
 import string
 
-#This function creates encrypted key
+#This function creates encrypted key which shuffles the letters
 def make_enc_key():
-    alphabet = string.ascii_lowercase
+    alphabet = string.ascii_lowercase+" "
     shuffled_alphabet = random.sample(alphabet, len(alphabet))
     enc_key=dict(zip(alphabet, shuffled_alphabet))
     return enc_key
@@ -34,13 +34,13 @@ def decrypt_text(encrypted_text,dec_key):
     return clear_text
 
 #Checks all the function
-def full_enc_flow(text):
+#def full_enc_flow(text):
     enc_key = make_enc_key()
-    print(enc_key )
+    print("encryption key:",enc_key )
     dec_key = (compute_dec_key(enc_key ))
-    print(dec_key)
+    print("Decryption key:",dec_key)
     enc_text=(encrypt_text(text,enc_key ))
-    print(enc_text)
-    print(decrypt_text(enc_text,dec_key))
+    print("Encrypted text:",enc_text)
+    print("Decrypted text:",decrypt_text(enc_text,dec_key))
 
 #full_enc_flow(input("Enter phrase to encrypt:"))
