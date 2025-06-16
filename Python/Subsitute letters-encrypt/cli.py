@@ -1,9 +1,8 @@
-
+import subs
 def cli():
     cmds=make_cmds_dict()
     while True:
         cmd=get_user_command(cmds)
-        cmds[cmd]()
 
 def get_user_command(cmds):
     while True:
@@ -14,16 +13,20 @@ def get_user_command(cmds):
             print('Not a valid command-try again')
 
 def handle_mek_cmd():
-    pass
+    mek=subs.make_enc_key()
+    return mek
 
 def handle_mdk_cmd():
-    pass
+    mdk=subs.compute_dec_key(handle_mek_cmd())
+    return mdk
 
 def handle_enc_cmd():
-    pass
+    enc=subs.encrypt_text(get_user_command(),handle_mek_cmd())
+    return enc
 
 def handle_dec_cmd():
-    pass
+    dec=subs.decrypt_text()
+    return dec
 
 def handle_empty_cmd():
     pass
